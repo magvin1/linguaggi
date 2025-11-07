@@ -26,5 +26,8 @@ p.testo-principale >a{
 p> * {
     color: green;
 }/* colora del color tutti gli elementi figli diretti di p */
+:hover{
+    color: yellow;
+}/* permette di cambiare il colore quando il mouse si trova sopra un elemento interattivo */
 /* Priorità di assegnazione regole (1)id, (2)class, (3)nome tag se si hanno più class ha priorità la specificità*/
 /* Più tardi viene caricata una regola CSS più ha priorità sulle altre */

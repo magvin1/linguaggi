@@ -1,0 +1,48 @@
+/*ES 1 colora di rosso elementi span */ 
+span{
+    color: red;
+}
+
+/*** ES 2 colora blu span contenuti paragrafo ***/
+p span{
+    color: blue;
+}
+/*** ES 3 colora verde span classe-1 ***/
+div#sezione-1 >p.classe-1 span.classe-1 {
+    color: green;
+}
+/*** ES 4 colora ultimo paragrafo di viola ***/
+.sezione-2 >p.classe-1{
+    color: violet;
+}
+/*** ES 5 colora di giallo il link al passaggio del mouse ***/
+a:hover{
+    color: yellow;
+    
+}
+/*** ES 6 Colora di grigio primo paragrafo classe-2 al passaggio mouse***/
+div#sezione-1 > p.classe-2:hover{
+    color: grey;
+}
+/*** ES 7 colora div sezione 2 solo primo paragrafo***/
+div.sezione-2 > p:not(.classe-1){
+    color: orange;
+}/* solitamente meno veloce, tutti i tipi specificati eccetto quelli nel not colorati*/
+.sezione-2>p:first-child{
+    color: orange;
+}/*più rapido, Il first child però è solo il primo effettivo, SE dell'elemento specificato altrimenti nulla se tipo diverso*/
+.sezione-2>p:nth-child(1){
+        color: orange;
+}
+/* :nth-child come first child o last child ma figlio specificato nelle parentesi
+    se dopo inserisco n diventa moltiplicazione 2n prende tutti i figli pari */
+/*** ES 8 colorare lista dei colori scritti***/
+li:nth-child(2n+0){
+    color: green;
+}
+li:nth-child(2n+1){
+    color: red;
+}
+li:first-child{
+    color: rgb(223, 223, 0);
+}
