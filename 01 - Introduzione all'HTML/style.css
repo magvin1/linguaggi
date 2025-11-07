@@ -1,0 +1,30 @@
+/* Per organizzarlo di solito lo si fa per  sezioni e si usano ** o *** per indicare una nuova sezione */
+p{
+    color:blue
+} /* colora tutti i paragrafi del color scelto */
+.testo-rosso {
+                color: rgb(147, 0, 51);
+}/* colora tutti i class testo rosso del color scelto */
+#sezione-2{
+    color: blueviolet;
+}/* colora tutti gli id sezione-2 del color scelto */
+a.testo-rosso{
+    color: rgb(117, 71, 11);
+}/* colora tutti gli elementi con tag a e class testo rosso del color scelto */
+a.testo-rosso.testo-marrone{
+    color: rgb(126, 110, 90);
+}/* colora tutti gli elementi con tag a e class testo-rosso e testo-marrone del color scelto */
+.testo-principale a{
+    color: yellow;
+}/* colora tutti gli elementi con class testo principale all'interno del tag a del color scelto */
+p.testo-principale a{
+    color: rgb(0, 255, 213);
+}/* colora tutti gli elementi con tag p  e class testo principale che sono all'interno del tag a del color scelto */
+p.testo-principale >a{
+    color: black;
+}/* */
+p> * {
+    color: green;
+}/* colora del color tutti gli elementi figli diretti di p */
+/* Priorità di assegnazione regole (1)id, (2)class, (3)nome tag se si hanno più class ha priorità la specificità*/
+/* Più tardi viene caricata una regola CSS più ha priorità sulle altre */
