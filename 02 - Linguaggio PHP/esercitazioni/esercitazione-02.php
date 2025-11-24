@@ -80,4 +80,48 @@
     echo "la media di età è ". $media_eta/$i . "\n";
     echo "la media di età è ". $media_eta/count($persone). "\n";
 
+    /**
+     *  Esercizio 4
+     * Data l'età di una persona, ritorna se può guidare il 125
+    */
+
+    /**
+     * Funzione per verificare se un cittadino può guidare un 125
+     * @param int età da verificare
+     * @return boolean 1 è vero può guidare, 0 è false
+     */
+
+    function puo_guidare_125($eta){
+        $eta_guida_125=16;
+        if($eta>$eta_guida_125):
+            return true;
+        endif;
+        return false;
+    }
+
+    $eta=14;
+    if(puo_guidare_125($eta)):
+        echo "può guidare il 125 \n";
+    else:
+        echo "non può guidare il 125 \n";
+    endif;
+    /**
+     *  Esercizio 5
+     * Dato un numero verifica se divisibile per 3
+    */
+    Function divisibile_3($numero){
+        if($numero%3==0):
+            return true;
+        endif;
+        return false;
+    }
+    
+    /**
+     *  Esercizio 6
+     * Dato un numero, ritornarlo in formato euro (€ 10.00)
+    */
+
+    Function in_euro($saldo){
+        return "€ ". number_format($saldo, 2, ".","") ;
+    }
 ?>

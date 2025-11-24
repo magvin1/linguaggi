@@ -170,7 +170,12 @@
         endswitch;
         echo "\n";
     endfor;
-
+    
+    /** 
+     * Calcola la media aritmetica 
+     * @param int[] i voti dello studente
+     * @return float con la media aritmetica
+     */
     function calcola_media($voti){
         $somma=0;
         for($i=0;$i<count($voti);$i++):
@@ -198,4 +203,69 @@
         endif;
        // br();
     endforeach;
+
+    //Strigna del tipo sunday 3 August 2025
+    /**
+     * formatta la data da formato inglese a formato italiano
+     * @param string input data in inglese
+     * @return string output data italiana
+     **/
+    function formatta_data($data){
+        $parti= explode(" ",$data);//esplode una stringa dopo avergli detto un separatore da considerare
+        $giorno_della_settimana = traduci_giorno_settimana($parti[0]);
+        $giorno_del_mese= traduci_mese($parti[1]);
+        $mese= traduci_mese($parti[2]);
+        $anno= $parti[3];
+        echo "Ecco la traduzione della data ". $giorno_della_settimana. " ". $giorno_del_mese . " ". $mese. " ". $anno;
+    }
+    function traduci_giorno_settimana($giorno){
+         switch(strtolower($giorno[$i])): 
+            case "monday":
+                return "Lunedì ";
+            case "tuesday":
+                return "martedì ";
+            case "wednesday":
+                return "mercoledì ";
+            case "thrusday":
+                return "giovedì ";
+            case "friday":
+                return "venerdì ";
+            case "saturday":
+                return "sabato ";
+            case "sunday":
+                return "domenica ";
+                default:
+                return false;
+        endswitch;
+        }
+        function traduci_mese($mese){
+         switch(strtolower($mese[$i])): 
+            case "january":
+                return "gennaio ";
+            case "february":
+                return "febbraio ";
+            case "march":
+                return "Marzo ";
+            case "april":
+                return "Aprile ";
+            case "may":
+                return "Maggio ";
+            case "june":
+                return "Giugno ";
+            case "july":
+                return "Luglio ";
+            case "august":
+                return "Agosto ";
+            case "september":
+                return "Settembre ";
+            case "october":
+                return "Ottobre ";
+            case "november":
+                return "Novembre ";
+            case "december":
+                return "Dicembre ";
+            default:
+                return false;
+        endswitch;
+        }
 ?>
