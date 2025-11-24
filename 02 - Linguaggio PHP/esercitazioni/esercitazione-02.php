@@ -28,8 +28,8 @@
 
     $valori2 = [12,13,5,12,15,3,19,4,17];
 
-    for($i=0; $valori2[$i]<15;$i++):
-        echo "elemento stampato ". $valori2;
+    for($i=0; $valori2[$i]<15 && $i< count($valori2);$i++):
+        echo "elemento stampato ". $valori2[$i];
         echo "\n";
     endfor;
     echo "\n";
