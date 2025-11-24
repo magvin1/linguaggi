@@ -4,7 +4,7 @@
     */
 
     $valori= [1,3,5,2,5,3,9,4,7];
-    $valori_MAX = $valori[1];
+    $valori_MAX = $valori[0];
 
     for($i=1; $i < count($valori);$i++):
         if($valori_MAX<$valori[$i]):
