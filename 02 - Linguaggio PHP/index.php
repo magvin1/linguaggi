@@ -107,4 +107,40 @@
         echo "Tel: " . $persona_2["telefono"];
     endif;
 
+    $voti = [6,7,7.5,4,9,8];
+    $somma =0;
+    $num_voti=0;
+
+    for($i=0; $i<count($voti); $i++):
+        if($voti[$i]>0 && $voti[$i]>0):
+            $somma += $voti[$i];
+            $num_voti++;
+        endif;
+    endfor;
+    
+    echo "\n";
+    echo "la somma dei voti è ". $somma;
+    echo "\n";
+    echo "il numero di voti è ". count($voti);
+    echo "\n";
+    echo "il numero di voti validi è ". $num_voti;
+
+
+    $media= $somma/$num_voti;
+    echo "\n";
+    echo "La media dei voti è ". $media;
+
+    $numero=45;
+    $valori= [1,3,6,87,23,5,45,17,89,12,34];
+
+    $i=0;
+    $trovato=false;
+
+    while(!$trovato):
+        if($valori[$i]== $numero):
+            $trovato;
+        endif;
+        $i++;
+    endwhile;
+
 ?>
