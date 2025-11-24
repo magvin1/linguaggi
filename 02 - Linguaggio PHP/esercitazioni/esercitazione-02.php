@@ -34,3 +34,39 @@
     endfor;
     echo "\n";
 ?>
+
+<?php
+    /**
+     * Esercizio 3
+     */
+    $persone = [
+        array(
+            "nome"=>"Mario";
+            "eta" => 19
+        )
+        array(
+            "nome"=>"Lucia";
+            "eta" => 14
+        ),
+        array(
+            "nome"=>"Rosa";
+            "eta" => 21
+        ),
+        array(
+            "nome"=>"Francesco";
+            "eta" => 24
+        ),
+        array(
+            "nome"=>"Giuseppe";
+            "eta" => 16
+        ),
+        array(
+            "nome"=>"Marta";
+            "eta" => 22
+        ),
+    ];
+
+    
+
+
+?>
