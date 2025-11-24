@@ -37,36 +37,47 @@
 
 <?php
     /**
-     * Esercizio 3
+     * Esercizio 3 Output dei nomi dei maggiorenni e media di età di tutti
      */
     $persone = [
         array(
-            "nome"=>"Mario";
-            "eta" => 19
-        )
-        array(
-            "nome"=>"Lucia";
-            "eta" => 14
+            "nome"=>"Mario",
+            "eta" => 19,
         ),
         array(
-            "nome"=>"Rosa";
-            "eta" => 21
+            "nome"=>"Lucia",
+            "eta" => 14,
         ),
         array(
-            "nome"=>"Francesco";
-            "eta" => 24
+            "nome"=>"Rosa",
+            "eta" => 21,
         ),
         array(
-            "nome"=>"Giuseppe";
-            "eta" => 16
+            "nome"=>"Francesco",
+            "eta" => 24,
         ),
         array(
-            "nome"=>"Marta";
-            "eta" => 22
+            "nome"=>"Giuseppe",
+            "eta" => 16,
+        ),
+        array(
+            "nome"=>"Marta",
+            "eta" => 22,
         ),
     ];
 
-    
 
+    for($i=0; $i<count($persone);$i++):
+        if($persone[$i]["eta"]>=18):
+            echo "". $persone[$i]["nome"]. " è maggiorenne";
+            echo "\n";
+        endif;
+    endfor;
+    $media_eta=$persone[0]["eta"];
+    for ($i=1; $i<count($persone);$i++):
+        $media_eta+=$persone[$i]["eta"];
+    endfor;
+    echo "la media di età è ". $media_eta/$i . "\n";
+    echo "la media di età è ". $media_eta/count($persone). "\n";
 
 ?>
