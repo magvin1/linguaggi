@@ -108,6 +108,30 @@
         $giudizio = 'eccellente';
     endif;
 
+    switch($voto):
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+            $giudizio='insufficiente';
+            break;
+        case 6:
+            $giudizio='sufficiente';
+            break;
+        case 7:
+
+            break;
+        case 8:
+
+            break;
+        case 9:
+
+            break;
+        case 10:
+
+            break;
+        endswitch;
     ?>
     
         <div>
@@ -240,5 +264,30 @@
                         <p>Il voto inserito non è valido (0 <= voto <= 10)</p>
                     <?php
                 endif;
+
+                switch($voto):
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                        $giudizio='insufficiente';
+                        break;
+                    case 6:
+                        $giudizio='sufficiente';
+                        break;
+                    case 7:
+                        $giudizio='buono';
+                        break;
+                    case 8:
+                        $giudizio='ottimo';
+                        break;
+                    case 9:
+                        $giudizio='sufficiente';
+                        break;
+                    case 10:
+                        $giudizio='eccellente';
+                        break;
+                    endswitch;
+
             ?>
-        </div>

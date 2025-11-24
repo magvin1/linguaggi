@@ -128,7 +128,7 @@
 
     $media= $somma/$num_voti;
     echo "\n";
-    echo "La media dei voti è ". $media;
+    echo "La media dei voti è ". $media ."\n";
 
     $numero=45;
     $valori= [1,3,6,87,23,5,45,17,89,12,34];
@@ -138,9 +138,64 @@
 
     while(!$trovato):
         if($valori[$i]== $numero):
-            $trovato;
+            $trovato=1;
         endif;
         $i++;
     endwhile;
 
+    $settimana = ["monday", "tuesday", "wednesday", "thrusday", "friday", "saturday", "sunday"];
+    for($i=0;$i<count($settimana);$i++):
+        switch($settimana[$i]): 
+            case "monday":
+                echo "Lunedì ";
+                break;
+            case "tuesday":
+                echo "martedì ";
+                break;
+            case "wednesday":
+                echo "mercoledì ";
+                break;
+            case "thrusday":
+                echo "giovedì ";
+                break;
+            case "friday":
+                echo "venerdì ";
+                break;
+            case "saturday":
+                echo "sabato ";
+                break;
+            case "sunday":
+                echo "domenica ";
+                break;
+        endswitch;
+        echo "\n";
+    endfor;
+
+    function calcola_media($voti){
+        $somma=0;
+        for($i=0;$i<count($voti);$i++):
+            $somma+=$voti[$i];
+        endfor;
+        $media=$somma/$i;
+        return $media;
+    }
+
+    $studenti =[
+        array(
+            "nome"=> "Mario",
+            "eta" => "21",
+            "voti"=> [3,7,9,5],
+        )
+    ];
+
+    foreach($studenti as $studente):
+        $media= calcola_media($studente["voti"]);
+        echo $studente["nome"] . " ha una media di ". $media . "\n";
+        if($media>=6):
+            echo "promosso \n";
+        else:
+            echo "bocciato \n";
+        endif;
+       // br();
+    endforeach;
 ?>
