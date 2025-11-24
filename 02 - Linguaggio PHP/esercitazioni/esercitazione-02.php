@@ -13,6 +13,7 @@
     endfor;
 
     echo "il maggiore tra i valori nell'array è ". $valori_MAX;
+    echo "\n";
 ?>
 <div>
     <h2> Esercizio 1</h2>
@@ -20,14 +21,16 @@
     </p>
 </div>
 <?php
-/** Esercizio 2
- * stampa tutti gli elementi, finchè l'elemento corrente è
- * inferiore a 15
- */
+    /** Esercizio 2
+     * stampa tutti gli elementi, finchè l'elemento corrente è
+     * inferiore a 15
+     */
 
-$valori = [12,13,5,12,15,3,19,4,17];
-for($i=0; $valori[$i]<15;$i++):
-    echo "elemento stampato ".$valori;
-endfor;
+    $valori2 = [12,13,5,12,15,3,19,4,17];
 
+    for($i=0; $valori2[$i]<15;$i++):
+        echo "elemento stampato ". $valori2;
+        echo "\n";
+    endfor;
+    echo "\n";
 ?>
