@@ -132,7 +132,7 @@ if(numero%2==0){
 // obbligatorio mettere graffe se il blocco di codice contiene più di una istruzione, per standard è buona pratica metterle sempre
 
 var mese= window.prompt("Inserisci il numero del mese (1-12):");//prompt restituisce una stringa
-switch(numero){
+switch(mese){
     case "1":
         window.alert("Gennaio");
         break;
@@ -178,3 +178,21 @@ switch(numero){
 // è buona pratica mettere sempre il break alla fine di ogni case per evitare il fall through
 // il default viene eseguito se nessun case corrisponde al valore della variabile
 
+console.log(document.getElementById("elemento-1")); //seleziona l'elemento HTML con id "elemento-1"
+console.log(document.getElementsByClassName("elementi")); //seleziona tutti gli elementi HTML con classe "elementi"
+console.log(document.getElementsByTagName("p")); //seleziona tutti gli elementi HTML con tag "p"
+
+console.log(document.querySelector(".elementi")); //seleziona il primo elemento HTML che corrisponde al selettore CSS ".elementi"
+console.log(document.querySelectorAll(".elementi")); //seleziona tutti gli elementi HTML che corrispondono al selettore CSS ".elementi"
+
+//riceve l'elemento con id "genitore" e lo assegna alla variabile lista
+var lista= document.getElementById("genitore"); // seleziona l'elemento con id "genitore"
+console.log(lista.getElementsByClassName("figlio")); // seleziona tutti gli elementi con classe "figlio"
+
+//inserisce del nuovo contenuto HTML nell'elemento lista
+lista.innerHTML="<li>1</li><li class='figlio'>2</li>"; // imposta il contenuto HTML dell'elemento lista
+console.log(lista.getElementsByClassName("figlio")); // ora seleziona tutti gli elementi con classe "figlio", incluso il nuovo elemento aggiunto
+
+//inserisce testo semplice nell'elemento lista
+lista.innerText="<li>1</li><li class='figlio'>2</li>"; // imposta il contenuto HTML dell'elemento lista
+console.log(lista.getElementsByClassName("figlio")); // ora seleziona tutti gli elementi con classe "figlio", incluso il nuovo elemento aggiunto
