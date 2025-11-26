@@ -118,3 +118,23 @@ console.log(somma>20);//"21">20 -> true la stringa viene convertita in numero
 console.log(somma.lenght);//"21".lenght -> 2 lunghezza della stringa
 console.log(somma.lenght<3);//"21".lenght<3 -> true lunghezza della stringa è 2
 console.log(a+b+c);//5+"1" -> "51" viene eseguita prima la somma tra a e b e poi la concatenazione con c, quindi da sinistra a destra
+// in js la somma tra numeri e stringhe può portare a risultati inaspettati a causa della conversione di tipo automatica
+// è buona pratica evitare di mischiare tipi diversi in operazioni aritmetiche
+
+var d;
+console.log(d); //undefined variabile dichiarata ma non inizializzata, variabile non assume alcun valore
+d=undefined;//assegnazione esplicita di undefined
+var e= null;
+console.log(e); //null variabile inizializzata a null (assenza di valore)
+
+var oggetto= {
+    "nullo": null,
+    "undefined": undefined,
+};
+console.log(oggetto.nullo); //null
+console.log(oggetto.undefined); //undefined
+console.log(oggetto);//{nullo: null, undefined: undefined} mostra tutte variabili dell'oggetto
+console.log(d==true); //false undefined non è uguale a true
+console.log(e==false); //false null non è uguale a false
+console.log(d==e); //true undefined è uguale a null con ==
+console.log(d===e); //false undefined non è uguale a null con ===
