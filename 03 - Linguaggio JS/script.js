@@ -65,3 +65,56 @@ console.log(a*b); //2
 console.log(a/b); //0.5
 console.log(a%b); //1
 //operatori aritmetici: + - * / %
+
+a=1;
+console.log(a++); //Leggo e poi incremento: leggo 1 e poi a diventa 2
+console.log(++a); //Incremento e poi leggo: a=3 e poi leggo 3
+console.log(a--); //Leggo e poi decremento: leggo 3 e poi a diventa 2
+console.log(--a); //Decremento e poi leggo: a=1 e poi leggo 1
+//operatori di incremento/decremento: ++ --
+
+//a=1;b=2;
+console.log(a+=b); //a=a+b -> 1+2=3
+console.log(a-=b); //a=a-b -> 3-2=1
+console.log(a*=b); //a=a*b -> 1*2=2
+console.log(a/=b); //a=a/b -> 2/2=1
+console.log(a%=b); //a=a%b -> 1%2=1
+//operatori di assegnazione: += -= *= /= %=
+
+console.log(a<b);//true
+console.log(a>b);//false
+console.log(a<=b);//true   
+console.log(a>=b);//false
+console.log(a==b);//false
+console.log(a!=b);//true
+//operatori di confronto: < > <= >= == != 
+
+console.log(!(a<b)); //false è il not a non è minore di b
+console.log(a==3 && b==1); //false a è uguale a 3 e b è uguale a 1
+console.log(a==3 || b==2); //true a è uguale a 3 o b è uguale a 2
+//operatori logici: &&(and) ||(or) !(not)
+
+a=3;
+
+console.log(a==3); //true
+console.log(a===3); //true
+console.log(a=="3"); //true
+console.log(a==="3"); //false
+// in js esistono due operatori di uguaglianza: == e ===
+//== confronta i valori dopo aver effettuato la conversione di tipo se necessaria
+//=== confronta i valori senza effettuare la conversione di tipo
+
+console.log(stringa1+stringa2); //Concatenazione di stringhe
+
+a=2;
+b=3;
+var c="1";
+var somma= a+c; //2+"1" -> "21" Somma
+console.log(a+b); //2+3 -> 5 Concatenzazione
+console.log(a+c); // "21"
+console.log(somma+b); //"21"+3 -> "213"
+console.log(somma>212);//"21">212 -> false la stringa 
+console.log(somma>20);//"21">20 -> true la stringa viene convertita in numero
+console.log(somma.lenght);//"21".lenght -> 2 lunghezza della stringa
+console.log(somma.lenght<3);//"21".lenght<3 -> true lunghezza della stringa è 2
+console.log(a+b+c);//5+"1" -> "51" viene eseguita prima la somma tra a e b e poi la concatenazione con c, quindi da sinistra a destra
