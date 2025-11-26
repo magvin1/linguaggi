@@ -41,3 +41,27 @@ var booleano= true;
 //booleani -> true o false
 console.log(typeof booleano);
 // booleani in js sono di tipo boolean
+
+var array= ["elemento1", "elemento2", "elemento3"];
+//array -> collezione di elementi
+console.log(typeof array);
+// in js gli array sono di tipo object]);
+
+var object= {
+    chiave1: "valore1",
+    chiave2: "valore2"
+};
+//oggetto -> collezione di coppie chiave:valore
+console.log(typeof object);
+// in js gli oggetti sono di tipo object
+
+
+var a=1;
+var b=2;
+
+console.log(a+b); //3
+console.log(a-b); //-1
+console.log(a*b); //2
+console.log(a/b); //0.5
+console.log(a%b); //1
+//operatori aritmetici: + - * / %
