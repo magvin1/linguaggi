@@ -1,3 +1,6 @@
+<div>
+    <h2> Esercizio 1</h2>
+ 
 <?php
     /*Esercizio 1
     * Dato un insieme di valori, trovare il numero più alto
@@ -12,13 +15,14 @@
         endif;
     endfor;
 
-    echo "il maggiore tra i valori nell'array è ". $valori_MAX;
+    echo "il maggiore tra i valori nell'array è ". "<strong>". $valori_MAX . "</strong>";
     echo "\n";
 ?>
-<div>
-    <h2> Esercizio 1</h2>
-    <p> il valore maggiore è:</strong> <?php echo $valori_MAX; ?>
+   <p> il valore maggiore è:<strong> <?php echo $valori_MAX; ?></strong>
     </p>
+</div>
+<div>
+    <h2> Esercizio 2</h2>
 </div>
 <?php
     /** Esercizio 2
@@ -34,7 +38,9 @@
     endfor;
     echo "\n";
 ?>
-
+    <div>
+        <h2> Esercizio 3</h2>
+    </div>
 <?php
     /**
      * Esercizio 3 Output dei nomi dei maggiorenni e media di età di tutti
@@ -69,17 +75,20 @@
 
     for($i=0; $i<count($persone);$i++):
         if($persone[$i]["eta"]>=18):
-            echo "". $persone[$i]["nome"]. " è maggiorenne";
-            echo "\n";
+            echo "". $persone[$i]["nome"]. " è maggiorenne \n<br>";
         endif;
     endfor;
     $media_eta=$persone[0]["eta"];
     for ($i=1; $i<count($persone);$i++):
         $media_eta+=$persone[$i]["eta"];
     endfor;
-    echo "la media di età è ". $media_eta/$i . "\n";
-    echo "la media di età è ". $media_eta/count($persone). "\n";
-
+    echo "la media di età è ". $media_eta/$i . "\n<br>";
+    echo "la media di età è ". $media_eta/count($persone). "\n<br>";
+    ?>
+    <div>
+        <h2> Esercizio 4</h2>
+    </div>
+<?php
     /**
      *  Esercizio 4
      * Data l'età di una persona, ritorna se può guidare il 125
@@ -101,10 +110,15 @@
 
     $eta=14;
     if(puo_guidare_125($eta)):
-        echo "può guidare il 125 \n";
+        echo "può guidare il 125 \n<br>";
     else:
-        echo "non può guidare il 125 \n";
+        echo "non può guidare il 125 \n<br>";
     endif;
+    ?>
+    <div>
+        <h2> Esercizio 5</h2>
+    </div>
+<?php
     /**
      *  Esercizio 5
      * Dato un numero verifica se divisibile per 3
@@ -115,7 +129,11 @@
         endif;
         return false;
     }
-    
+    ?>
+    <div>
+        <h2> Esercizio 6</h2>
+    </div>
+<?php
     /**
      *  Esercizio 6
      * Dato un numero, ritornarlo in formato euro (€ 10.00)
