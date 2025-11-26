@@ -121,3 +121,60 @@ console.log(e==false); //false null non è uguale a false
 console.log(d==e); //true undefined è uguale a null con ==
 console.log(d===e); //false undefined non è uguale a null con ===
 
+//controlli di flusso: if else
+var numero= window.prompt("Inserisci un numero:");//prompt restituisce una stringa
+
+if(numero%2==0){
+    window.alert("Il numero è pari.");
+} else {
+    window.alert("Il numero è dispari.");
+}//controlli di flusso: if else
+// obbligatorio mettere graffe se il blocco di codice contiene più di una istruzione, per standard è buona pratica metterle sempre
+
+var mese= window.prompt("Inserisci il numero del mese (1-12):");//prompt restituisce una stringa
+switch(numero){
+    case "1":
+        window.alert("Gennaio");
+        break;
+    case "2":  
+        window.alert("Febbraio");
+        break;
+    case "3":   
+        window.alert("Marzo");
+        break;
+    case "4":   
+        window.alert("Aprile");
+        break;
+    case "5":   
+        window.alert("Maggio");
+        break;
+    case "6":   
+        window.alert("Giugno");
+        break;
+    case "7":   
+        window.alert("Luglio");
+        break;
+    case "8":   
+        window.alert("Agosto");
+        break;
+    case "9":   
+        window.alert("Settembre");
+        break;
+    case "10":   
+        window.alert("Ottobre");
+        break;
+    case "11":   
+        window.alert("Novembre");
+        break;
+    case "12":   
+        window.alert("Dicembre");
+        break;
+    default:
+        window.alert("Mese non valido.");
+        break;
+}//controlli di flusso: switch case
+// in js il valore del case viene confrontato con il valore della variabile senza conversione di tipo
+// quindi è importante usare lo stesso tipo di dato (stringa con stringa, numero con numero)
+// è buona pratica mettere sempre il break alla fine di ogni case per evitare il fall through
+// il default viene eseguito se nessun case corrisponde al valore della variabile
+
