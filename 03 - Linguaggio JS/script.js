@@ -196,3 +196,27 @@ console.log(lista.getElementsByClassName("figlio")); // ora seleziona tutti gli 
 //inserisce testo semplice nell'elemento lista
 lista.innerText="<li>1</li><li class='figlio'>2</li>"; // imposta il contenuto HTML dell'elemento lista
 console.log(lista.getElementsByClassName("figlio")); // ora seleziona tutti gli elementi con classe "figlio", incluso il nuovo elemento aggiunto
+
+var voti =[4,6,7,8,6,8];
+var somma=0;
+for(let i=0;i<voti.length;i++){ //ciclo for
+    somma+=voti[i];
+}
+console.log("Media = "+ (somma/voti.length)); // calcola e stampa la media dei voti
+
+let trovato=false
+let i=0;
+var numero= window.prompt("Inserisci un numero:");
+var elementi = [1,2,3,4,6,7,8,9]
+while(!trovato && i<elementi.length){ //ciclo while
+    if(elementi[i]==numero){
+        trovato=true;
+    }
+    i++;
+}
+if(trovato){
+    console.log("Numero trovato");
+}
+else{
+    console.log("Numero non trovato");
+}
