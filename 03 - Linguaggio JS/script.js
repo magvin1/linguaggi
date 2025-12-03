@@ -243,3 +243,16 @@ click_me_button.addEventListener('mouseenter', function(){//aggiunge un event li
     click_me_button.style.left= Math.random()*100+"%";//sposta il bottone in una posizione casuale
     click_me_button.style.top= Math.random()*100+"%";
 });
+
+var show_password_button= document.getElementById('password')
+show_password_button.addEventListener('click',function(){
+    let password_input=document.getElementById('password');
+    if(password_input.getAttribute('type')=='password'){
+        password_input.setAttribute('type','text');
+        show_password_button.innerText="Nascondi password";
+    }
+    else{
+        password_input.setAttribute('type','password');
+        show_password_button.innerText="mostra password";
+    }
+});

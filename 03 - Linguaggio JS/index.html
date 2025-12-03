@@ -23,6 +23,37 @@
     <button id="click_me_button">
         Cliccami!
     </button>
+
+    <form action="" method=""><!-- action dove deve mandare informazioni, 
+        method come lo deve mandare:
+        GET usato solitamente per i filtri di ricerca e le ricerche, sono in chiaro nell'url sono informazioni non sensibili, chiede al server una risorsa
+        POST usato per mandare informazioni sensibili, non sono in chiaro nell'url, manda informazioni al server per elaborarle
+         -->
+        <input type="text" placeholder="segnaposto" value="valore" required disabled/><br><!-- required significa che il campo deve essere compilato  disabled spegne il campo impedendo input -->
+        <input type="email" placeholder="a@b.it"><br>
+        <input type="password" placeholder="password" id="password"><br>
+        <button id="show_password"><span>mostra</span> la password</button>
+        <input type="tel" placeholder="1234567890"><br>
+        <input type="number" placeholder="1"><br>
+        <input type="date" placeholder="01-02-2025"><br>
+        <input type="file"><br>
+        <input type="time" placeholder="hh:mm"><br>
+        <input type="radio" name="radio-1" value="val-1" id="radio-1-1">Valore 1
+        <label for="radio-1-1">SI</label><br>
+        <input type="radio" name="radio-1" value="val-2" id="radio-1-2">Valore 2
+        <label for="radio-1-2">NO</label><br>
+        <input type="checkbox">checkbox<br>
+        <select>
+            <option  value="val-1">valore 1</option>
+            <option  value="val-2">valore 2</option>
+        </select><br>
+        <textarea></textarea>
+        <button type="submit">
+            Invia
+        </button><!-- button è contenitore quindi accetta anche css-->
+        <input type="submit"><!-- non accetta css o html al suo interno e lo scrive come  presente nel value-->
+        <button type="reset">reset</button>
+    </form>
     <script src="script.js"></script>
 
 </body>
