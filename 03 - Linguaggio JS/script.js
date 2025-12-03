@@ -237,3 +237,9 @@ for(chiave in oggetto){//il ciclo for in itera sulle chiavi di un oggetto
     console.log(oggetto[chiave]);
     //console.log(oggetto.chiave);
 }
+
+var click_me_button= document.getElementById("click_me_button");
+click_me_button.addEventListener('mouseenter', function(){//aggiunge un event listener per l'evento mouseenter
+    click_me_button.style.left= Math.random()*100+"%";//sposta il bottone in una posizione casuale
+    click_me_button.style.top= Math.random()*100+"%";
+});
