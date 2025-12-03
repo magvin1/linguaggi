@@ -204,7 +204,7 @@ for(let i=0;i<voti.length;i++){ //ciclo for
 }
 console.log("Media = "+ (somma/voti.length)); // calcola e stampa la media dei voti
 
-let trovato=false
+let trovato=false // esercizio per trovare il numero in un array
 let i=0;
 var numero= window.prompt("Inserisci un numero:");
 var elementi = [1,2,3,4,6,7,8,9]
@@ -219,4 +219,21 @@ if(trovato){
 }
 else{
     console.log("Numero non trovato");
+}
+
+//ciclo for each del php tradotti in js
+var array=[1,2,3,4,5];
+var oggetto={
+    nome:"luca",
+    cognome: "Rossi",
+    //chiave: "chiave!",
+};
+
+//ciclo for of
+for(valore of array)//Il ciclo for of itera sui valori di un array o di una stringa
+    console.log(valore);
+//ciclo for in
+for(chiave in oggetto){//il ciclo for in itera sulle chiavi di un oggetto
+    console.log(oggetto[chiave]);
+    //console.log(oggetto.chiave);
 }
